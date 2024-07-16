@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:favorite_places/models/place.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +15,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
       Navigator.of(context).pop(
-        Place(title: _enteredTitle),
+        Place(title: _enteredTitle,image: File('')),
       );
     }
   }
