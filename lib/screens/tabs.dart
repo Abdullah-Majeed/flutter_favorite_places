@@ -1,4 +1,4 @@
-import 'package:favorite_places/screens/add_new_places.dart';
+import 'package:favorite_places/screens/add_places.dart';
 import 'package:flutter/material.dart';
 import 'package:favorite_places/models/place.dart';
 
@@ -14,7 +14,7 @@ class _TabScreenState extends State<TabScreen> {
 
   void _addNewPlace(BuildContext context) async {
     final newPlaceData = await Navigator.of(context)
-        .push<Place>(MaterialPageRoute(builder: (ctx) => const AddNewPlace()));
+        .push<Place>(MaterialPageRoute(builder: (ctx) => const AddPlaceScreen()));
     if (newPlaceData == null) {
       return;
     }
